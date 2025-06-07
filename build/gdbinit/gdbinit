@@ -1,0 +1,2 @@
+source E:/PlatformIO/Projects/esp32theremin/build/gdbinit/symbols
+source E:/PlatformIO/Projects/esp32theremin/build/gdbinit/connect
