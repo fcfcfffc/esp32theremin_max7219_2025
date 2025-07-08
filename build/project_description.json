@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32theremin",
-    "project_version":    "218e382-dirty",
+    "project_version":    "860ec37-dirty",
     "project_path":       "E:/PlatformIO/Projects/esp32theremin",
     "idf_path":           "D:/esp/v5.4.1/esp-idf",
     "build_dir":          "E:/PlatformIO/Projects/esp32theremin/build",
