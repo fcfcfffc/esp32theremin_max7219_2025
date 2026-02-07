@@ -1,13 +1,6 @@
 {
-<<<<<<< HEAD
     "recommendations": [
-        "pioarduino.pioarduino-ide",
-=======
-    // See http://go.microsoft.com/fwlink/?LinkId=827846
-    // for the documentation about the extensions.json format
-    "recommendations": [
->>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
-        "platformio.platformio-ide"
+        "pioarduino.pioarduino-ide"
     ],
     "unwantedRecommendations": [
         "ms-vscode.cpptools-extension-pack"
