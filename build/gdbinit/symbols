@@ -13,8 +13,16 @@ end
 
 # Load bootloader symbols
 set confirm off
+<<<<<<< HEAD
     add-symbol-file E:/PlatformIO/Projects/esp32theremin/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
 file E:/PlatformIO/Projects/esp32theremin/build/esp32theremin.elf
+=======
+    add-symbol-file C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader/bootloader.elf
+set confirm on
+
+# Load application symbols
+file C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp32theremin.elf
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb

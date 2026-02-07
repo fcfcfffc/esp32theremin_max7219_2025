@@ -1,6 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32theremin",
+<<<<<<< HEAD
     "project_version":    "860ec37-dirty",
     "project_path":       "E:/PlatformIO/Projects/esp32theremin",
     "idf_path":           "D:/esp/v5.4.1/esp-idf",
@@ -8,6 +9,15 @@
     "config_file":        "E:/PlatformIO/Projects/esp32theremin/sdkconfig",
     "config_defaults":    "",
     "bootloader_elf":     "E:/PlatformIO/Projects/esp32theremin/build/bootloader/bootloader.elf",
+=======
+    "project_version":    "1",
+    "project_path":       "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin",
+    "idf_path":           "D:/esp/v5.4.1/esp-idf",
+    "build_dir":          "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build",
+    "config_file":        "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/sdkconfig",
+    "config_defaults":    "",
+    "bootloader_elf":     "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader/bootloader.elf",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
     "app_elf":            "esp32theremin.elf",
     "app_bin":            "esp32theremin.bin",
     "build_type":         "flash_app",
@@ -39,7 +49,11 @@
             "priv_reqs": [ "esp_driver_gptimer", "esp_driver_gpio", "esp_driver_uart" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/app_trace/libapp_trace.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/app_trace/libapp_trace.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/app_trace/app_trace.c", "D:/esp/v5.4.1/esp-idf/components/app_trace/app_trace_util.c", "D:/esp/v5.4.1/esp-idf/components/app_trace/host_file_io.c", "D:/esp/v5.4.1/esp-idf/components/app_trace/port/port_uart.c" ],
             "include_dirs": [ "include" ]
         },
@@ -54,7 +68,11 @@
             "priv_reqs": [ "esptool_py", "efuse", "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/app_update/libapp_update.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/app_update/libapp_update.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/app_update/esp_ota_ops.c", "D:/esp/v5.4.1/esp-idf/components/app_update/esp_ota_app_desc.c" ],
             "include_dirs": [ "include" ]
         },
@@ -84,7 +102,11 @@
             "priv_reqs": [ "spi_flash", "mbedtls", "efuse", "heap", "esp_bootloader_format", "esp_app_format" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/bootloader_support/libbootloader_support.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/bootloader_support/libbootloader_support.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_common.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_common_loader.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_clock_init.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_mem.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_random.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_efuse.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/flash_encrypt.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/secure_boot.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_random_esp32s3.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/bootloader_flash/src/flash_qio_mode.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32s3.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/bootloader_utility.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/flash_partitions.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/esp_image_format.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/idf/bootloader_sha.c", "D:/esp/v5.4.1/esp-idf/components/bootloader_support/src/esp32s3/secure_boot_secure_features.c" ],
             "include_dirs": [ "include", "bootloader_flash/include" ]
         },
@@ -114,7 +136,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/cmock/libcmock.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/cmock/libcmock.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/cmock/CMock/src/cmock.c" ],
             "include_dirs": [ "CMock/src" ]
         },
@@ -129,7 +155,11 @@
             "priv_reqs": [ "esp_driver_uart", "esp_driver_usb_serial_jtag" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/console/libconsole.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/console/libconsole.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/console/commands.c", "D:/esp/v5.4.1/esp-idf/components/console/esp_console_common.c", "D:/esp/v5.4.1/esp-idf/components/console/split_argv.c", "D:/esp/v5.4.1/esp-idf/components/console/linenoise/linenoise.c", "D:/esp/v5.4.1/esp-idf/components/console/esp_console_repl_chip.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_cmd.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_date.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_dbl.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_dstr.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_end.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_file.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_hashtable.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_int.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_lit.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_rem.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_rex.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_str.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/arg_utils.c", "D:/esp/v5.4.1/esp-idf/components/console/argtable3/argtable3.c" ],
             "include_dirs": [ "D:/esp/v5.4.1/esp-idf/components/console" ]
         },
@@ -144,7 +174,11 @@
             "priv_reqs": [ "pthread", "esp_system" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/cxx/libcxx.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/cxx/libcxx.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/cxx/cxx_exception_stubs.cpp", "D:/esp/v5.4.1/esp-idf/components/cxx/cxx_guards.cpp", "D:/esp/v5.4.1/esp-idf/components/cxx/cxx_init.cpp" ],
             "include_dirs": []
         },
@@ -159,7 +193,11 @@
             "priv_reqs": [ "efuse", "esp_timer", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/driver/libdriver.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/driver/libdriver.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/adc_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/adc_dma_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/timer_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/i2c/i2c.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/i2s_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/mcpwm_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/pcnt_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/rmt_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/sigma_delta_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/deprecated/rtc_temperature_legacy.c", "D:/esp/v5.4.1/esp-idf/components/driver/touch_sensor/touch_sensor_common.c", "D:/esp/v5.4.1/esp-idf/components/driver/touch_sensor/esp32s3/touch_sensor.c", "D:/esp/v5.4.1/esp-idf/components/driver/twai/twai.c" ],
             "include_dirs": [ "deprecated", "i2c/include", "touch_sensor/include", "twai/include", "touch_sensor/esp32s3/include" ]
         },
@@ -174,7 +212,11 @@
             "priv_reqs": [ "bootloader_support", "soc", "spi_flash", "esp_system", "esp_partition", "esp_app_format" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/efuse/libefuse.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/efuse/libefuse.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/efuse/esp32s3/esp_efuse_table.c", "D:/esp/v5.4.1/esp-idf/components/efuse/esp32s3/esp_efuse_fields.c", "D:/esp/v5.4.1/esp-idf/components/efuse/esp32s3/esp_efuse_rtc_calib.c", "D:/esp/v5.4.1/esp-idf/components/efuse/esp32s3/esp_efuse_utility.c", "D:/esp/v5.4.1/esp-idf/components/efuse/src/esp_efuse_api.c", "D:/esp/v5.4.1/esp-idf/components/efuse/src/esp_efuse_fields.c", "D:/esp/v5.4.1/esp-idf/components/efuse/src/esp_efuse_utility.c", "D:/esp/v5.4.1/esp-idf/components/efuse/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c", "D:/esp/v5.4.1/esp-idf/components/efuse/src/esp_efuse_startup.c" ],
             "include_dirs": [ "include", "esp32s3/include" ]
         },
@@ -189,7 +231,11 @@
             "priv_reqs": [ "http_parser", "esp_timer", "lwip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp-tls/libesp-tls.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp-tls/libesp-tls.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp-tls/esp_tls.c", "D:/esp/v5.4.1/esp-idf/components/esp-tls/esp-tls-crypto/esp_tls_crypto.c", "D:/esp/v5.4.1/esp-idf/components/esp-tls/esp_tls_error_capture.c", "D:/esp/v5.4.1/esp-idf/components/esp-tls/esp_tls_platform_port.c", "D:/esp/v5.4.1/esp-idf/components/esp-tls/esp_tls_mbedtls.c" ],
             "include_dirs": [ "D:/esp/v5.4.1/esp-idf/components/esp-tls", "esp-tls-crypto" ]
         },
@@ -204,7 +250,11 @@
             "priv_reqs": [ "driver", "esp_driver_gpio", "efuse", "esp_pm", "esp_ringbuf", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_adc/libesp_adc.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_adc/libesp_adc.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_oneshot.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_cali.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_cali_curve_fitting.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/deprecated/esp_adc_cal_common_legacy.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_continuous.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_monitor.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/gdma/adc_dma.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/adc_filter.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/esp32s3/curve_fitting_coefficients.c", "D:/esp/v5.4.1/esp-idf/components/esp_adc/deprecated/esp32s3/esp_adc_cal_legacy.c" ],
             "include_dirs": [ "include", "interface", "esp32s3/include", "deprecated/include" ]
         },
@@ -219,7 +269,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_app_format/libesp_app_format.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_app_format/libesp_app_format.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_app_format/esp_app_desc.c" ],
             "include_dirs": [ "include" ]
         },
@@ -234,7 +288,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_bootloader_format/libesp_bootloader_format.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c" ],
             "include_dirs": [ "include" ]
         },
@@ -249,7 +307,11 @@
             "priv_reqs": [ "esp_timer", "driver", "esp_event" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_coex/libesp_coex.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_coex/libesp_coex.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_coex/esp32s3/esp_coex_adapter.c", "D:/esp/v5.4.1/esp-idf/components/esp_coex/src/coexist_debug_diagram.c", "D:/esp/v5.4.1/esp-idf/components/esp_coex/src/coexist_debug.c" ],
             "include_dirs": [ "include" ]
         },
@@ -264,7 +326,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_common/libesp_common.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_common/libesp_common.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_common/src/esp_err_to_name.c" ],
             "include_dirs": [ "include" ]
         },
@@ -294,7 +360,11 @@
             "priv_reqs": [ "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_cam/libesp_driver_cam.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_cam/libesp_driver_cam.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_cam/esp_cam_ctlr.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_cam/dvp_share_ctrl.c" ],
             "include_dirs": [ "include", "interface" ]
         },
@@ -324,7 +394,11 @@
             "priv_reqs": [ "esp_pm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio_glitch_filter_ops.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_gpio/src/rtc_io.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_gpio/src/dedic_gpio.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_gpio/src/gpio_pin_glitch_filter.c" ],
             "include_dirs": [ "include" ]
         },
@@ -339,7 +413,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_gptimer/src/gptimer.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_gptimer/src/gptimer_common.c" ],
             "include_dirs": [ "include" ]
         },
@@ -354,7 +432,11 @@
             "priv_reqs": [ "esp_driver_gpio", "esp_pm", "esp_ringbuf" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2c/i2c_master.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2c/i2c_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2c/i2c_slave.c" ],
             "include_dirs": [ "include" ]
         },
@@ -369,7 +451,11 @@
             "priv_reqs": [ "esp_driver_gpio", "esp_pm", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_i2s/libesp_driver_i2s.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2s/i2s_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2s/i2s_std.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2s/i2s_pdm.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2s/i2s_tdm.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_i2s/i2s_platform.c" ],
             "include_dirs": [ "include" ]
         },
@@ -414,7 +500,11 @@
             "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_ledc/src/ledc.c" ],
             "include_dirs": [ "include" ]
         },
@@ -429,7 +519,11 @@
             "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_cap.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_cmpr.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_com.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_fault.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_gen.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_oper.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_sync.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_mcpwm/src/mcpwm_timer.c" ],
             "include_dirs": [ "include" ]
         },
@@ -459,7 +553,11 @@
             "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_pcnt/src/pulse_cnt.c" ],
             "include_dirs": [ "include" ]
         },
@@ -489,7 +587,11 @@
             "priv_reqs": [ "esp_pm", "esp_driver_gpio", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_rmt/libesp_driver_rmt.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_rmt/src/rmt_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_rmt/src/rmt_encoder.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_rmt/src/rmt_rx.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_rmt/src/rmt_tx.c" ],
             "include_dirs": [ "include" ]
         },
@@ -519,7 +621,11 @@
             "priv_reqs": [ "esp_pm", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_sdm/libesp_driver_sdm.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_sdm/src/sdm.c" ],
             "include_dirs": [ "include" ]
         },
@@ -534,7 +640,11 @@
             "priv_reqs": [ "esp_timer", "esp_pm", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_sdmmc/libesp_driver_sdmmc.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_sdmmc/src/sdmmc_transaction.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_sdmmc/src/sdmmc_host.c" ],
             "include_dirs": [ "include" ]
         },
@@ -549,7 +659,11 @@
             "priv_reqs": [ "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_sdspi/src/sdspi_crc.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_sdspi/src/sdspi_host.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_sdspi/src/sdspi_transaction.c" ],
             "include_dirs": [ "include" ]
         },
@@ -564,7 +678,11 @@
             "priv_reqs": [ "esp_timer", "esp_mm", "esp_driver_gpio", "esp_ringbuf" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_spi/libesp_driver_spi.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_spi/libesp_driver_spi.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_spi/src/gpspi/spi_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_spi/src/gpspi/spi_master.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_spi/src/gpspi/spi_slave.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_spi/src/gpspi/spi_dma.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_spi/src/gpspi/spi_slave_hd.c" ],
             "include_dirs": [ "include" ]
         },
@@ -594,7 +712,11 @@
             "priv_reqs": [ "efuse" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_tsens/libesp_driver_tsens.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_tsens/libesp_driver_tsens.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_tsens/src/temperature_sensor.c" ],
             "include_dirs": [ "include" ]
         },
@@ -609,7 +731,11 @@
             "priv_reqs": [ "esp_pm", "esp_driver_gpio", "esp_ringbuf" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_uart/libesp_driver_uart.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_uart/libesp_driver_uart.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_uart/src/uart.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_uart/src/uart_vfs.c" ],
             "include_dirs": [ "include" ]
         },
@@ -624,7 +750,11 @@
             "priv_reqs": [ "esp_driver_gpio", "esp_ringbuf", "esp_pm", "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_usb_serial_jtag/libesp_driver_usb_serial_jtag.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_driver_usb_serial_jtag/libesp_driver_usb_serial_jtag.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag_connection_monitor.c", "D:/esp/v5.4.1/esp-idf/components/esp_driver_usb_serial_jtag/src/usb_serial_jtag_vfs.c" ],
             "include_dirs": [ "include" ]
         },
@@ -639,7 +769,11 @@
             "priv_reqs": [ "log", "esp_timer", "esp_driver_spi", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_eth/libesp_eth.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_eth/libesp_eth.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_eth/src/esp_eth.c", "D:/esp/v5.4.1/esp-idf/components/esp_eth/src/phy/esp_eth_phy_802_3.c", "D:/esp/v5.4.1/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c" ],
             "include_dirs": [ "include" ]
         },
@@ -654,7 +788,11 @@
             "priv_reqs": [ "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_event/libesp_event.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_event/libesp_event.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_event/default_event_loop.c", "D:/esp/v5.4.1/esp-idf/components/esp_event/esp_event.c", "D:/esp/v5.4.1/esp-idf/components/esp_event/esp_event_private.c" ],
             "include_dirs": [ "include" ]
         },
@@ -669,7 +807,11 @@
             "priv_reqs": [ "soc", "esp_rom", "esp_system" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_gdbstub/libesp_gdbstub.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_gdbstub/libesp_gdbstub.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_gdbstub/src/gdbstub.c", "D:/esp/v5.4.1/esp-idf/components/esp_gdbstub/src/gdbstub_transport.c", "D:/esp/v5.4.1/esp-idf/components/esp_gdbstub/src/packet.c", "D:/esp/v5.4.1/esp-idf/components/esp_gdbstub/src/port/xtensa/gdbstub_xtensa.c", "D:/esp/v5.4.1/esp-idf/components/esp_gdbstub/src/port/xtensa/gdbstub-entry.S", "D:/esp/v5.4.1/esp-idf/components/esp_gdbstub/src/port/xtensa/xt_debugexception.S" ],
             "include_dirs": [ "include" ]
         },
@@ -684,7 +826,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hid/libesp_hid.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hid/libesp_hid.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_hid/src/esp_hidd.c", "D:/esp/v5.4.1/esp-idf/components/esp_hid/src/esp_hidh.c", "D:/esp/v5.4.1/esp-idf/components/esp_hid/src/esp_hid_common.c" ],
             "include_dirs": [ "include" ]
         },
@@ -699,7 +845,11 @@
             "priv_reqs": [ "tcp_transport", "http_parser" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_http_client/libesp_http_client.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_http_client/libesp_http_client.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_http_client/esp_http_client.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_client/lib/http_auth.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_client/lib/http_header.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_client/lib/http_utils.c" ],
             "include_dirs": [ "include" ]
         },
@@ -714,7 +864,11 @@
             "priv_reqs": [ "mbedtls", "lwip", "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_http_server/libesp_http_server.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_http_server/libesp_http_server.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/httpd_main.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/httpd_parse.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/httpd_sess.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/httpd_txrx.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/httpd_uri.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/httpd_ws.c", "D:/esp/v5.4.1/esp-idf/components/esp_http_server/src/util/ctrl_sock.c" ],
             "include_dirs": [ "include" ]
         },
@@ -729,7 +883,11 @@
             "priv_reqs": [ "log", "app_update" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_https_ota/libesp_https_ota.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_https_ota/libesp_https_ota.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_https_ota/src/esp_https_ota.c" ],
             "include_dirs": [ "include" ]
         },
@@ -744,7 +902,11 @@
             "priv_reqs": [ "lwip" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_https_server/libesp_https_server.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_https_server/libesp_https_server.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_https_server/src/https_server.c" ],
             "include_dirs": [ "include" ]
         },
@@ -759,7 +921,11 @@
             "priv_reqs": [ "efuse", "spi_flash", "bootloader_support", "esp_security", "esp_driver_gpio", "esp_timer", "esp_pm", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hw_support/libesp_hw_support.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hw_support/libesp_hw_support.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/cpu.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/esp_cpu_intr.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/esp_memory_utils.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/cpu_region_protect.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/esp_clk.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/clk_ctrl_os.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/hw_random.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/intr_alloc.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/mac_addr.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/periph_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/revision.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/rtc_module.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_modem.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_modes.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_console.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_usb.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_gpio.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_event.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/regi2c_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/esp_gpio_reserve.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sar_periph_ctrl_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/io_mux.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/esp_clk_tree.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp_clk_tree_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/dma/esp_dma_utils.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/dma/gdma_link.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/spi_share_hw_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/spi_bus_lock.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/clk_utils.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/adc_share_hw_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/dma/gdma.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/deprecated/gdma_legacy.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/dma/esp_async_memcpy.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/dma/async_memcpy_gdma.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/systimer.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/mspi_timing_tuning.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/mspi_timing_by_mspi_delay.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/sleep_wake_stub.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/esp_clock_output.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/rtc_clk.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/rtc_clk_init.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/rtc_init.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/rtc_sleep.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/rtc_time.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/chip_info.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/sar_periph_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/mspi_timing_config.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp32s3/esp_memprot.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/port/esp_memprot_conv.c", "D:/esp/v5.4.1/esp-idf/components/esp_hw_support/lowpower/port/esp32s3/sleep_cpu.c" ],
             "include_dirs": [ "include", "include/soc", "include/soc/esp32s3", "dma/include", "ldo/include", "debug_probe/include" ]
         },
@@ -774,7 +940,11 @@
             "priv_reqs": [ "esp_mm", "esp_psram", "esp_pm", "esp_driver_i2s" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_lcd/libesp_lcd.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_lcd/libesp_lcd.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_lcd/src/esp_lcd_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/src/esp_lcd_panel_io.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/src/esp_lcd_panel_nt35510.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/src/esp_lcd_panel_ssd1306.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/src/esp_lcd_panel_st7789.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/src/esp_lcd_panel_ops.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/i2c/esp_lcd_panel_io_i2c_v1.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/i2c/esp_lcd_panel_io_i2c_v2.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/spi/esp_lcd_panel_io_spi.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/i80/esp_lcd_panel_io_i80.c", "D:/esp/v5.4.1/esp-idf/components/esp_lcd/rgb/esp_lcd_panel_rgb.c" ],
             "include_dirs": [ "include", "interface", "rgb/include" ]
         },
@@ -789,7 +959,11 @@
             "priv_reqs": [ "protobuf-c" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_local_ctrl/libesp_local_ctrl.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_handler.c", "D:/esp/v5.4.1/esp-idf/components/esp_local_ctrl/proto-c/esp_local_ctrl.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/esp_local_ctrl/src/esp_local_ctrl_transport_httpd.c" ],
             "include_dirs": [ "include" ]
         },
@@ -804,7 +978,11 @@
             "priv_reqs": [ "heap", "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_mm/libesp_mm.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_mm/libesp_mm.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_mm/esp_mmu_map.c", "D:/esp/v5.4.1/esp-idf/components/esp_mm/port/esp32s3/ext_mem_layout.c", "D:/esp/v5.4.1/esp-idf/components/esp_mm/esp_cache.c", "D:/esp/v5.4.1/esp-idf/components/esp_mm/heap_align_hw.c" ],
             "include_dirs": [ "include" ]
         },
@@ -819,7 +997,11 @@
             "priv_reqs": [ "esp_netif_stack" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_netif/libesp_netif.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_netif/libesp_netif.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_netif/esp_netif_handlers.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/esp_netif_objects.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/esp_netif_defaults.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/lwip/esp_netif_sntp.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/lwip/esp_netif_lwip_defaults.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/lwip/netif/wlanif.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/lwip/netif/ethernetif.c", "D:/esp/v5.4.1/esp-idf/components/esp_netif/lwip/netif/esp_pbuf_ref.c" ],
             "include_dirs": [ "include" ]
         },
@@ -849,7 +1031,11 @@
             "priv_reqs": [ "esp_system", "spi_flash", "partition_table", "bootloader_support", "app_update" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_partition/libesp_partition.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_partition/libesp_partition.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_partition/partition.c", "D:/esp/v5.4.1/esp-idf/components/esp_partition/partition_target.c" ],
             "include_dirs": [ "include" ]
         },
@@ -864,7 +1050,11 @@
             "priv_reqs": [ "nvs_flash", "driver", "efuse", "esp_timer", "esp_wifi" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_phy/libesp_phy.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_phy/libesp_phy.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_phy/src/phy_override.c", "D:/esp/v5.4.1/esp-idf/components/esp_phy/src/lib_printf.c", "D:/esp/v5.4.1/esp-idf/components/esp_phy/src/phy_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_phy/src/phy_init.c", "D:/esp/v5.4.1/esp-idf/components/esp_phy/esp32s3/phy_init_data.c", "D:/esp/v5.4.1/esp-idf/components/esp_phy/src/btbb_init.c" ],
             "include_dirs": [ "include", "esp32s3/include" ]
         },
@@ -879,7 +1069,11 @@
             "priv_reqs": [ "esp_system", "esp_driver_gpio", "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_pm/libesp_pm.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_pm/libesp_pm.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_pm/pm_locks.c", "D:/esp/v5.4.1/esp-idf/components/esp_pm/pm_trace.c", "D:/esp/v5.4.1/esp-idf/components/esp_pm/pm_impl.c" ],
             "include_dirs": [ "include" ]
         },
@@ -909,7 +1103,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_ringbuf/ringbuf.c" ],
             "include_dirs": [ "include" ]
         },
@@ -924,7 +1122,11 @@
             "priv_reqs": [ "soc", "hal" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_rom/libesp_rom.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_rom/libesp_rom.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_sys.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_print.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_crc.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_uart.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_spiflash.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_efuse.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_gpio.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_longjmp.S", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_systimer.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_wdt.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_cache_esp32s2_esp32s3.c", "D:/esp/v5.4.1/esp-idf/components/esp_rom/patches/esp_rom_cache_writeback_esp32s3.S" ],
             "include_dirs": [ "include", "esp32s3/include", "esp32s3/include/esp32s3", "esp32s3" ]
         },
@@ -939,7 +1141,11 @@
             "priv_reqs": [ "efuse", "esp_hw_support", "esp_system", "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_security/libesp_security.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_security/libesp_security.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_security/src/init.c", "D:/esp/v5.4.1/esp-idf/components/esp_security/src/esp_hmac.c", "D:/esp/v5.4.1/esp-idf/components/esp_security/src/esp_ds.c", "D:/esp/v5.4.1/esp-idf/components/esp_security/src/esp_crypto_lock.c" ],
             "include_dirs": [ "include" ]
         },
@@ -954,7 +1160,11 @@
             "priv_reqs": [ "spi_flash", "esp_timer", "esp_mm", "bootloader_support", "esp_pm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_system/libesp_system.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_system/libesp_system.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_system/esp_err.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/crosscore_int.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/esp_ipc.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/freertos_hooks.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/int_wdt.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/panic.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/esp_system.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/startup.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/startup_funcs.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/system_time.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/stack_check.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/ubsan.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/xt_wdt.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/task_wdt/task_wdt.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/task_wdt/task_wdt_impl_timergroup.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/cpu_start.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/panic_handler.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/esp_system_chip.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/image_process.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/brownout.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/esp_ipc_isr.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_port.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_handler.S", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_routines.S", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/panic_arch.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/panic_handler_asm.S", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack_asm.S", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers_asm.S", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/debug_stubs.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/arch/xtensa/trax.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/soc/esp32s3/highint_hdl.S", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/soc/esp32s3/clk.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/soc/esp32s3/reset_reason.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/soc/esp32s3/system_internal.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/soc/esp32s3/cache_err_int.c", "D:/esp/v5.4.1/esp-idf/components/esp_system/port/soc/esp32s3/apb_backup_dma.c" ],
             "include_dirs": [ "include" ]
         },
@@ -969,7 +1179,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_timer/libesp_timer.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_timer/libesp_timer.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_timer/src/esp_timer.c", "D:/esp/v5.4.1/esp-idf/components/esp_timer/src/esp_timer_init.c", "D:/esp/v5.4.1/esp-idf/components/esp_timer/src/ets_timer_legacy.c", "D:/esp/v5.4.1/esp-idf/components/esp_timer/src/system_time.c", "D:/esp/v5.4.1/esp-idf/components/esp_timer/src/esp_timer_impl_common.c", "D:/esp/v5.4.1/esp-idf/components/esp_timer/src/esp_timer_impl_systimer.c" ],
             "include_dirs": [ "include" ]
         },
@@ -984,7 +1198,11 @@
             "priv_reqs": [ "vfs", "esp_driver_uart", "esp_driver_usb_serial_jtag" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_vfs_console/libesp_vfs_console.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_vfs_console/libesp_vfs_console.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_vfs_console/vfs_console.c" ],
             "include_dirs": [ "include" ]
         },
@@ -999,7 +1217,11 @@
             "priv_reqs": [ "driver", "esptool_py", "esp_pm", "esp_timer", "nvs_flash", "wpa_supplicant", "hal", "lwip", "esp_coex" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_wifi/libesp_wifi.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_wifi/libesp_wifi.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/lib_printf.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/mesh_event.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/smartconfig.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/wifi_init.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/wifi_default.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/wifi_netif.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/wifi_default_ap.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/esp32s3/esp_adapter.c", "D:/esp/v5.4.1/esp-idf/components/esp_wifi/src/smartconfig_ack.c" ],
             "include_dirs": [ "include", "include/local", "wifi_apps/include", "wifi_apps/nan_app/include" ]
         },
@@ -1014,7 +1236,11 @@
             "priv_reqs": [ "esp_partition", "spi_flash", "bootloader_support", "mbedtls", "esp_rom", "soc", "esp_system", "esp_driver_gpio", "driver" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/espcoredump/libespcoredump.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/espcoredump/libespcoredump.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_init.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_common.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_flash.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_uart.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_elf.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_binary.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_sha.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/core_dump_crc.c", "D:/esp/v5.4.1/esp-idf/components/espcoredump/src/port/xtensa/core_dump_port.c" ],
             "include_dirs": [ "include", "include/port/xtensa" ]
         },
@@ -1044,7 +1270,11 @@
             "priv_reqs": [ "vfs", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/fatfs/libfatfs.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/fatfs/libfatfs.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/fatfs/diskio/diskio.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/diskio/diskio_rawflash.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/diskio/diskio_wl.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/src/ff.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/src/ffunicode.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/port/freertos/ffsystem.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/diskio/diskio_sdmmc.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/vfs/vfs_fat.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/vfs/vfs_fat_sdmmc.c", "D:/esp/v5.4.1/esp-idf/components/fatfs/vfs/vfs_fat_spiflash.c" ],
             "include_dirs": [ "diskio", "src", "vfs" ]
         },
@@ -1059,7 +1289,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/freertos/libfreertos.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/freertos/libfreertos.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/freertos/heap_idf.c", "D:/esp/v5.4.1/esp-idf/components/freertos/app_startup.c", "D:/esp/v5.4.1/esp-idf/components/freertos/port_common.c", "D:/esp/v5.4.1/esp-idf/components/freertos/port_systick.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/list.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/timers.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/event_groups.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/stream_buffer.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c", "D:/esp/v5.4.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c", "D:/esp/v5.4.1/esp-idf/components/freertos/esp_additions/freertos_compatibility.c", "D:/esp/v5.4.1/esp-idf/components/freertos/esp_additions/idf_additions_event_groups.c", "D:/esp/v5.4.1/esp-idf/components/freertos/esp_additions/idf_additions.c" ],
             "include_dirs": [ "config/include", "config/include/freertos", "config/xtensa/include", "FreeRTOS-Kernel/include", "FreeRTOS-Kernel/portable/xtensa/include", "FreeRTOS-Kernel/portable/xtensa/include/freertos", "esp_additions/include" ]
         },
@@ -1074,7 +1308,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/hal/libhal.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/hal/libhal.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/hal/hal_utils.c", "D:/esp/v5.4.1/esp-idf/components/hal/mpu_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/efuse_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/esp32s3/efuse_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/mmu_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/cache_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/color_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_flash_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_flash_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_flash_encrypt_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/esp32s3/clk_tree_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/systimer_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/uart_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/uart_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/gpio_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/rtc_io_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/timer_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/ledc_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/ledc_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/i2c_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/i2c_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/rmt_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/pcnt_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/mcpwm_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/twai_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/twai_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/gdma_hal_top.c", "D:/esp/v5.4.1/esp-idf/components/hal/gdma_hal_ahb_v1.c", "D:/esp/v5.4.1/esp-idf/components/hal/i2s_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/sdm_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/sdmmc_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/adc_hal_common.c", "D:/esp/v5.4.1/esp-idf/components/hal/adc_oneshot_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/adc_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/lcd_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/mpi_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/sha_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/aes_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/brownout_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_slave_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_slave_hal_iram.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_slave_hd_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/spi_flash_hal_gpspi.c", "D:/esp/v5.4.1/esp-idf/components/hal/hmac_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/ds_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/usb_serial_jtag_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/usb_dwc_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/usb_wrap_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/esp32s3/touch_sensor_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/touch_sensor_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/xt_wdt_hal.c", "D:/esp/v5.4.1/esp-idf/components/hal/esp32s3/rtc_cntl_hal.c" ],
             "include_dirs": [ "platform_port/include", "esp32s3/include", "include" ]
         },
@@ -1089,7 +1327,11 @@
             "priv_reqs": [ "soc" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/heap/libheap.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/heap/libheap.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/heap/heap_caps_base.c", "D:/esp/v5.4.1/esp-idf/components/heap/heap_caps.c", "D:/esp/v5.4.1/esp-idf/components/heap/heap_caps_init.c", "D:/esp/v5.4.1/esp-idf/components/heap/multi_heap.c", "D:/esp/v5.4.1/esp-idf/components/heap/tlsf/tlsf.c", "D:/esp/v5.4.1/esp-idf/components/heap/port/memory_layout_utils.c", "D:/esp/v5.4.1/esp-idf/components/heap/port/esp32s3/memory_layout.c" ],
             "include_dirs": [ "include", "tlsf" ]
         },
@@ -1104,7 +1346,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/http_parser/libhttp_parser.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/http_parser/libhttp_parser.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/http_parser/http_parser.c" ],
             "include_dirs": [ "." ]
         },
@@ -1149,7 +1395,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/json/libjson.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/json/libjson.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/json/cJSON/cJSON.c", "D:/esp/v5.4.1/esp-idf/components/json/cJSON/cJSON_Utils.c" ],
             "include_dirs": [ "cJSON" ]
         },
@@ -1164,7 +1414,11 @@
             "priv_reqs": [ "soc", "hal", "esp_hw_support" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/log/liblog.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/log/liblog.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/log/src/os/log_timestamp.c", "D:/esp/v5.4.1/esp-idf/components/log/src/log_timestamp_common.c", "D:/esp/v5.4.1/esp-idf/components/log/src/os/log_lock.c", "D:/esp/v5.4.1/esp-idf/components/log/src/os/log_write.c", "D:/esp/v5.4.1/esp-idf/components/log/src/buffer/log_buffers.c", "D:/esp/v5.4.1/esp-idf/components/log/src/util.c", "D:/esp/v5.4.1/esp-idf/components/log/src/log_level/log_level.c", "D:/esp/v5.4.1/esp-idf/components/log/src/log_level/tag_log_level/tag_log_level.c", "D:/esp/v5.4.1/esp-idf/components/log/src/log_level/tag_log_level/linked_list/log_linked_list.c", "D:/esp/v5.4.1/esp-idf/components/log/src/log_level/tag_log_level/cache/log_binary_heap.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1179,7 +1433,11 @@
             "priv_reqs": [ "vfs" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/lwip/liblwip.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/lwip/liblwip.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/lwip/apps/sntp/sntp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/api_lib.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/api_msg.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/err.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/if_api.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/netbuf.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/netdb.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/netifapi.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/sockets.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/api/tcpip.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/apps/sntp/sntp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/apps/netbiosns/netbiosns.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/def.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/dns.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/inet_chksum.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/init.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ip.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/mem.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/memp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/netif.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/pbuf.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/raw.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/stats.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/sys.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/tcp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/tcp_in.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/tcp_out.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/timeouts.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/udp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/autoip.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/dhcp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/etharp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/icmp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/igmp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_napt.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_addr.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv4/ip4_frag.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/dhcp6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/ethip6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/icmp6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/inet6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/ip6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/ip6_addr.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/ip6_frag.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/mld6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/core/ipv6/nd6.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ethernet.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/bridgeif.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/bridgeif_fdb.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/slipif.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/auth.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/ccp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/chap-md5.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/chap-new.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/chap_ms.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/demand.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/eap.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/ecp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/eui64.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/fsm.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/ipcp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/ipv6cp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/lcp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/magic.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/mppe.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/multilink.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/ppp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppapi.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppcrypt.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppoe.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppol2tp.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/pppos.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/upap.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/utils.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/vj.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/hooks/tcp_isn_default.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/hooks/lwip_default_hooks.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/debug/lwip_debug.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/sockets_ext.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/freertos/sys_arch.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/acd_dhcp_check.c", "D:/esp/v5.4.1/esp-idf/components/lwip/port/esp32xx/vfs_lwip.c", "D:/esp/v5.4.1/esp-idf/components/lwip/apps/ping/esp_ping.c", "D:/esp/v5.4.1/esp-idf/components/lwip/apps/ping/ping.c", "D:/esp/v5.4.1/esp-idf/components/lwip/apps/ping/ping_sock.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/arc4.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/des.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/md4.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/md5.c", "D:/esp/v5.4.1/esp-idf/components/lwip/lwip/src/netif/ppp/polarssl/sha1.c", "D:/esp/v5.4.1/esp-idf/components/lwip/apps/dhcpserver/dhcpserver.c" ],
             "include_dirs": [ "include", "include/apps", "include/apps/sntp", "lwip/src/include", "port/include", "port/freertos/include/", "port/esp32xx/include", "port/esp32xx/include/arch", "port/esp32xx/include/sys" ]
         },
@@ -1194,8 +1452,13 @@
             "priv_reqs": [ "soc", "esp_hw_support", "esp_pm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/libmbedtls.a",
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c", "E:/PlatformIO/Projects/esp32theremin/build/x509_crt_bundle.S" ],
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/libmbedtls.a",
+            "sources": [ "D:/esp/v5.4.1/esp-idf/components/mbedtls/esp_crt_bundle/esp_crt_bundle.c", "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/x509_crt_bundle.S" ],
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "include_dirs": [ "port/include", "mbedtls/include", "mbedtls/library", "esp_crt_bundle/include" ]
         },
         "mqtt": {
@@ -1209,7 +1472,11 @@
             "priv_reqs": [ "esp_timer", "http_parser", "esp_hw_support", "heap" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/mqtt/libmqtt.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/mqtt/libmqtt.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/mqtt/esp-mqtt/mqtt_client.c", "D:/esp/v5.4.1/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_msg.c", "D:/esp/v5.4.1/esp-idf/components/mqtt/esp-mqtt/lib/mqtt_outbox.c", "D:/esp/v5.4.1/esp-idf/components/mqtt/esp-mqtt/lib/platform_esp32_idf.c" ],
             "include_dirs": [ "D:/esp/v5.4.1/esp-idf/components/mqtt/esp-mqtt/include" ]
         },
@@ -1224,7 +1491,11 @@
             "priv_reqs": [ "soc", "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/newlib/libnewlib.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/newlib/libnewlib.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/newlib/abort.c", "D:/esp/v5.4.1/esp-idf/components/newlib/assert.c", "D:/esp/v5.4.1/esp-idf/components/newlib/heap.c", "D:/esp/v5.4.1/esp-idf/components/newlib/flockfile.c", "D:/esp/v5.4.1/esp-idf/components/newlib/locks.c", "D:/esp/v5.4.1/esp-idf/components/newlib/poll.c", "D:/esp/v5.4.1/esp-idf/components/newlib/pthread.c", "D:/esp/v5.4.1/esp-idf/components/newlib/random.c", "D:/esp/v5.4.1/esp-idf/components/newlib/getentropy.c", "D:/esp/v5.4.1/esp-idf/components/newlib/reent_init.c", "D:/esp/v5.4.1/esp-idf/components/newlib/newlib_init.c", "D:/esp/v5.4.1/esp-idf/components/newlib/syscalls.c", "D:/esp/v5.4.1/esp-idf/components/newlib/termios.c", "D:/esp/v5.4.1/esp-idf/components/newlib/stdatomic.c", "D:/esp/v5.4.1/esp-idf/components/newlib/time.c", "D:/esp/v5.4.1/esp-idf/components/newlib/sysconf.c", "D:/esp/v5.4.1/esp-idf/components/newlib/realpath.c", "D:/esp/v5.4.1/esp-idf/components/newlib/scandir.c", "D:/esp/v5.4.1/esp-idf/components/newlib/port/esp_time_impl.c" ],
             "include_dirs": [ "platform_include" ]
         },
@@ -1239,7 +1510,11 @@
             "priv_reqs": [ "spi_flash", "newlib" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/nvs_flash/libnvs_flash.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/nvs_flash/libnvs_flash.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_api.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_cxx_api.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_item_hash_list.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_page.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_pagemanager.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_storage.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_handle_simple.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_handle_locked.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_partition.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_partition_lookup.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_partition_manager.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_types.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_platform.cpp", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_bootloader.c", "D:/esp/v5.4.1/esp-idf/components/nvs_flash/src/nvs_encrypted_partition.cpp" ],
             "include_dirs": [ "include" ]
         },
@@ -1254,7 +1529,11 @@
             "priv_reqs": [ "bootloader_support", "efuse", "esp_partition", "nvs_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/nvs_sec_provider/libnvs_sec_provider.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/nvs_sec_provider/nvs_sec_provider.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1299,7 +1578,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/perfmon/libperfmon.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/perfmon/libperfmon.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/perfmon/xtensa_perfmon_access.c", "D:/esp/v5.4.1/esp-idf/components/perfmon/xtensa_perfmon_apis.c", "D:/esp/v5.4.1/esp-idf/components/perfmon/xtensa_perfmon_masks.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1314,7 +1597,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/protobuf-c/libprotobuf-c.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/protobuf-c/libprotobuf-c.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" ],
             "include_dirs": [ "protobuf-c" ]
         },
@@ -1329,7 +1616,11 @@
             "priv_reqs": [ "protobuf-c", "mbedtls", "console", "esp_http_server", "driver" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/protocomm/libprotocomm.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/protocomm/libprotocomm.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/protocomm/src/common/protocomm.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/proto-c/constants.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/proto-c/sec0.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/proto-c/sec2.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/proto-c/session.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/transports/protocomm_console.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/transports/protocomm_httpd.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/security/security0.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/security/security1.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/security/security2.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp.c", "D:/esp/v5.4.1/esp-idf/components/protocomm/src/crypto/srp6a/esp_srp_mpi.c" ],
             "include_dirs": [ "include/common", "include/security", "include/transports", "include/crypto/srp6a", "proto-c" ]
         },
@@ -1344,7 +1635,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/pthread/libpthread.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/pthread/libpthread.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/pthread/pthread.c", "D:/esp/v5.4.1/esp-idf/components/pthread/pthread_cond_var.c", "D:/esp/v5.4.1/esp-idf/components/pthread/pthread_local_storage.c", "D:/esp/v5.4.1/esp-idf/components/pthread/pthread_rwlock.c", "D:/esp/v5.4.1/esp-idf/components/pthread/pthread_semaphore.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1359,7 +1654,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/rt/librt.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/rt/librt.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/rt/FreeRTOS_POSIX_mqueue.c", "D:/esp/v5.4.1/esp-idf/components/rt/FreeRTOS_POSIX_utils.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1374,7 +1673,11 @@
             "priv_reqs": [ "soc", "esp_timer", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/sdmmc/libsdmmc.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/sdmmc/libsdmmc.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/sdmmc/sdmmc_cmd.c", "D:/esp/v5.4.1/esp-idf/components/sdmmc/sdmmc_common.c", "D:/esp/v5.4.1/esp-idf/components/sdmmc/sdmmc_init.c", "D:/esp/v5.4.1/esp-idf/components/sdmmc/sdmmc_io.c", "D:/esp/v5.4.1/esp-idf/components/sdmmc/sdmmc_mmc.c", "D:/esp/v5.4.1/esp-idf/components/sdmmc/sdmmc_sd.c", "D:/esp/v5.4.1/esp-idf/components/sdmmc/sd_pwr_ctrl/sd_pwr_ctrl.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1389,7 +1692,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/soc/libsoc.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/soc/libsoc.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/soc/lldesc.c", "D:/esp/v5.4.1/esp-idf/components/soc/dport_access_common.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/interrupts.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/gpio_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/uart_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/adc_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/dedic_gpio_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/gdma_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/spi_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/ledc_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/pcnt_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/rmt_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/sdm_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/i2s_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/i2c_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/temperature_sensor_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/timer_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/lcd_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/mcpwm_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/mpi_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/sdmmc_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/touch_sensor_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/twai_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/wdt_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/usb_dwc_periph.c", "D:/esp/v5.4.1/esp-idf/components/soc/esp32s3/rtc_io_periph.c" ],
             "include_dirs": [ "include", "esp32s3", "esp32s3/include", "esp32s3/register" ]
         },
@@ -1404,7 +1711,11 @@
             "priv_reqs": [ "bootloader_support", "app_update", "soc", "esp_mm", "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/spi_flash/libspi_flash.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/spi_flash/libspi_flash.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/spi_flash/flash_brownout_hook.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/esp32s3/spi_flash_oct_flash_init.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_hpm_enable.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_drivers.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_generic.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_issi.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_mxic.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_gd.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_winbond.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_boya.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_mxic_opi.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_chip_th.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/memspi_host_driver.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/cache_utils.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/flash_mmap.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/flash_ops.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_wrap.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/esp_flash_api.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/esp_flash_spi_init.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_os_func_app.c", "D:/esp/v5.4.1/esp-idf/components/spi_flash/spi_flash_os_func_noos.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1419,7 +1730,11 @@
             "priv_reqs": [ "bootloader_support", "esptool_py", "vfs" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/spiffs/libspiffs.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/spiffs/libspiffs.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/spiffs/spiffs_api.c", "D:/esp/v5.4.1/esp-idf/components/spiffs/spiffs/src/spiffs_cache.c", "D:/esp/v5.4.1/esp-idf/components/spiffs/spiffs/src/spiffs_check.c", "D:/esp/v5.4.1/esp-idf/components/spiffs/spiffs/src/spiffs_gc.c", "D:/esp/v5.4.1/esp-idf/components/spiffs/spiffs/src/spiffs_hydrogen.c", "D:/esp/v5.4.1/esp-idf/components/spiffs/spiffs/src/spiffs_nucleus.c", "D:/esp/v5.4.1/esp-idf/components/spiffs/esp_spiffs.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1434,7 +1749,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/tcp_transport/libtcp_transport.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/tcp_transport/libtcp_transport.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/tcp_transport/transport.c", "D:/esp/v5.4.1/esp-idf/components/tcp_transport/transport_ssl.c", "D:/esp/v5.4.1/esp-idf/components/tcp_transport/transport_internal.c", "D:/esp/v5.4.1/esp-idf/components/tcp_transport/transport_socks_proxy.c", "D:/esp/v5.4.1/esp-idf/components/tcp_transport/transport_ws.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1449,7 +1768,11 @@
             "priv_reqs": [ "esp_timer" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/touch_element/libtouch_element.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/touch_element/libtouch_element.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/touch_element/touch_element.c", "D:/esp/v5.4.1/esp-idf/components/touch_element/touch_button.c", "D:/esp/v5.4.1/esp-idf/components/touch_element/touch_slider.c", "D:/esp/v5.4.1/esp-idf/components/touch_element/touch_matrix.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1479,7 +1802,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/unity/libunity.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/unity/libunity.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/unity/unity/src/unity.c", "D:/esp/v5.4.1/esp-idf/components/unity/unity_compat.c", "D:/esp/v5.4.1/esp-idf/components/unity/unity_runner.c", "D:/esp/v5.4.1/esp-idf/components/unity/unity_utils_freertos.c", "D:/esp/v5.4.1/esp-idf/components/unity/unity_utils_cache.c", "D:/esp/v5.4.1/esp-idf/components/unity/unity_utils_memory.c", "D:/esp/v5.4.1/esp-idf/components/unity/unity_port_esp32.c", "D:/esp/v5.4.1/esp-idf/components/unity/port/esp/unity_utils_memory_esp.c" ],
             "include_dirs": [ "include", "unity/src" ]
         },
@@ -1494,7 +1821,11 @@
             "priv_reqs": [ "esp_driver_gpio", "esp_mm" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/usb/libusb.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/usb/libusb.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/usb/hcd_dwc.c", "D:/esp/v5.4.1/esp-idf/components/usb/enum.c", "D:/esp/v5.4.1/esp-idf/components/usb/hub.c", "D:/esp/v5.4.1/esp-idf/components/usb/usb_helpers.c", "D:/esp/v5.4.1/esp-idf/components/usb/usb_host.c", "D:/esp/v5.4.1/esp-idf/components/usb/usb_private.c", "D:/esp/v5.4.1/esp-idf/components/usb/usbh.c", "D:/esp/v5.4.1/esp-idf/components/usb/usb_phy.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1509,7 +1840,11 @@
             "priv_reqs": [ "esp_timer", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_vfs_console" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/vfs/libvfs.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/vfs/libvfs.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/vfs/vfs.c", "D:/esp/v5.4.1/esp-idf/components/vfs/vfs_eventfd.c", "D:/esp/v5.4.1/esp-idf/components/vfs/vfs_semihost.c", "D:/esp/v5.4.1/esp-idf/components/vfs/nullfs.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1524,7 +1859,11 @@
             "priv_reqs": [ "spi_flash" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/wear_levelling/libwear_levelling.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/wear_levelling/libwear_levelling.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/wear_levelling/Partition.cpp", "D:/esp/v5.4.1/esp-idf/components/wear_levelling/SPI_Flash.cpp", "D:/esp/v5.4.1/esp-idf/components/wear_levelling/WL_Ext_Perf.cpp", "D:/esp/v5.4.1/esp-idf/components/wear_levelling/WL_Ext_Safe.cpp", "D:/esp/v5.4.1/esp-idf/components/wear_levelling/WL_Flash.cpp", "D:/esp/v5.4.1/esp-idf/components/wear_levelling/crc32.cpp", "D:/esp/v5.4.1/esp-idf/components/wear_levelling/wear_levelling.cpp" ],
             "include_dirs": [ "include" ]
         },
@@ -1539,7 +1878,11 @@
             "priv_reqs": [ "protobuf-c", "bt", "json", "esp_timer", "esp_wifi" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/wifi_provisioning/libwifi_provisioning.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/wifi_provisioning/libwifi_provisioning.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/wifi_config.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/wifi_scan.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/wifi_ctrl.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/manager.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/handlers.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/scheme_console.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/proto-c/wifi_ctrl.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.c", "D:/esp/v5.4.1/esp-idf/components/wifi_provisioning/src/scheme_softap.c" ],
             "include_dirs": [ "include" ]
         },
@@ -1554,7 +1897,11 @@
             "priv_reqs": [ "mbedtls", "esp_timer", "esp_wifi" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/port/os_xtensa.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/port/eloop.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/ap_config.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/ieee802_1x.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/wpa_auth.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_ie.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/pmksa_cache_auth.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/sta_info.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/ieee802_11.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/ap/comeback_token.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/common/sae.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/common/dragonfly.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/common/wpa_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/bitfield.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/aes-siv.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha256-kdf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/crypto_ops.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/dh_group5.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/dh_groups.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/ms_funcs.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha1-tlsprf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha256-tlsprf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha384-tlsprf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha256-prf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha1-prf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha384-prf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/md4-internal.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/sha1-tprf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_common/eap_wsc_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/common/ieee802_11_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/chap.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_mschapv2.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_peap.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_peap_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_tls.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_tls_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_ttls.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/mschapv2.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast_pac.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/rsn_supp/pmksa_cache.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa_ie.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/base64.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/ext_password.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/uuid.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/wpabuf.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/wpa_debug.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/utils/json.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps_attr_build.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps_attr_process.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/wps/wps_enrollee.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/common/sae_pk.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_eap_client.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa2_api_port.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpas_glue.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_common.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wps.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa3.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_owe.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/tls_mbedtls.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-bignum.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-rsa.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-ec.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/rc4.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/des-internal.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/aes-wrap.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/aes-unwrap.c", "D:/esp/v5.4.1/esp-idf/components/wpa_supplicant/src/crypto/aes-ccm.c" ],
             "include_dirs": [ "include", "port/include", "esp_supplicant/include" ]
         },
@@ -1569,7 +1916,11 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
+<<<<<<< HEAD
             "file": "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/xtensa/libxtensa.a",
+=======
+            "file": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/xtensa/libxtensa.a",
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
             "sources": [ "D:/esp/v5.4.1/esp-idf/components/xtensa/eri.c", "D:/esp/v5.4.1/esp-idf/components/xtensa/xt_trax.c", "D:/esp/v5.4.1/esp-idf/components/xtensa/xtensa_context.S", "D:/esp/v5.4.1/esp-idf/components/xtensa/xtensa_intr_asm.S", "D:/esp/v5.4.1/esp-idf/components/xtensa/xtensa_intr.c", "D:/esp/v5.4.1/esp-idf/components/xtensa/xtensa_vectors.S" ],
             "include_dirs": [ "esp32s3/include", "include", "deprecated_include" ]
         }
@@ -2838,10 +3189,17 @@
     },
     "debug_prefix_map_gdbinit": "",
     "gdbinit_files": {
+<<<<<<< HEAD
         "01_symbols": "E:/PlatformIO/Projects/esp32theremin/build/gdbinit/symbols",
         "02_prefix_map": "E:/PlatformIO/Projects/esp32theremin/build/gdbinit/prefix_map",
         "03_py_extensions": "E:/PlatformIO/Projects/esp32theremin/build/gdbinit/py_extensions",
         "04_connect": "E:/PlatformIO/Projects/esp32theremin/build/gdbinit/connect"
+=======
+        "01_symbols": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/gdbinit/symbols",
+        "02_prefix_map": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/gdbinit/prefix_map",
+        "03_py_extensions": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/gdbinit/py_extensions",
+        "04_connect": "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/gdbinit/connect"
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
     },
     "debug_arguments_openocd": "-f board/esp32s3-builtin.cfg"
 }

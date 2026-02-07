@@ -38,6 +38,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a")
 endif()
 
@@ -47,5 +48,16 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "E:/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/mbedtls/library/libmbedtls.a")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/mbedtls/library/libmbedx509.a")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/mbedtls/mbedtls/library/libmbedtls.a")
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
 endif()
 

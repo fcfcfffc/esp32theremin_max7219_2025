@@ -39,11 +39,19 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< HEAD
   include("E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hw_support/port/esp32s3/cmake_install.cmake")
+=======
+  include("C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hw_support/port/esp32s3/cmake_install.cmake")
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+<<<<<<< HEAD
   include("E:/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
+=======
+  include("C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/esp-idf/esp_hw_support/lowpower/cmake_install.cmake")
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
 endif()
 

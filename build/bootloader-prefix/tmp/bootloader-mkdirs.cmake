@@ -10,18 +10,34 @@ if(NOT EXISTS "D:/esp/v5.4.1/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "D:/esp/v5.4.1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
+<<<<<<< HEAD
   "E:/PlatformIO/Projects/esp32theremin/build/bootloader"
   "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix"
   "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/tmp"
   "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp"
   "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src"
   "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp"
+=======
+  "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader"
+  "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix"
+  "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/tmp"
+  "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src"
+  "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp"
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
+<<<<<<< HEAD
     file(MAKE_DIRECTORY "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
   file(MAKE_DIRECTORY "E:/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+=======
+    file(MAKE_DIRECTORY "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+endforeach()
+if(cfgdir)
+  file(MAKE_DIRECTORY "C:/Users/fcfcf/Documents/PlatformIO/Projects/esp32theremin/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
 endif()
