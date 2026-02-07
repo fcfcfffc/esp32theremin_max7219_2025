@@ -24,35 +24,6 @@ typedef struct __attribute__((packed)) struct_message {
 struct_message myData;
 
 // ======= 全局变量 =======
-
-// ========== 可调参数区 ==========
-
-// 1. 稳定性判定参数
-const int stableThreshold = 10;              // 稳定计数阈值（5-20），10次×20ms=0.2秒
-const float freqChangeMax = 4.5;             // 频率变化最大允许值（3.0-8.0），超过此值判定为不稳定
-const float rawDeltaReset = 7.5;             // 手靠近Δf阈值（6.0-8.0），超过此值重置稳定状态
-const int stableLockCount = 5;               // 锁定计数阈值（3-10），防止Δf在临界点卡住
-
-// 2. 自适应频率滤波参数
-const float minAlphaFreq = 0.10;             // 频率稳定时的滤波系数（0.05-0.20），越小越平滑
-const float maxAlphaFreq = 0.40;             // 频率突变时的滤波系数（0.30-0.55），越大响应越快
-const float freqDiffDivisor = 50.0;          // 频率差分界点（30.0-75.0），达到此值时alpha为最大值
-
-// 3. Δf自适应滤波参数
-const float minAlphaDelta = 0.25;            // Δf稳定时的滤波系数（0.15-0.35）
-const float maxAlphaDelta = 0.75;            // Δf突变时的滤波系数（0.60-0.85）
-const float deltaDiffDivisor = 20.0;         // Δf变化分界点（15.0-30.0）
-
-// 4. 映射范围参数
-const float DELTA_MIN = 2.0;                 // Δf最小值（0.5-2.0），对应PWM=0, looking=0
-const float DELTA_MAX = 8.0;                 // Δf最大值（6.0-10.0），对应PWM=255, looking=8
-
-// ========== 功能开关 ==========
-bool autoSetBase = true;                     // 自动基准更新开关（true=自动，false=手动）
-bool enableESPNow = false;                    // ESP-NOW广播开关（true=开启，false=关闭）
-bool enableSerial = true;                    // 串口监视开关（true=开启，false=关闭）
-
-// ========== 运行时变量 ==========
 int looking;
 hw_timer_t *timer = NULL;
 portMUX_TYPE timerMux = portMUX_INITIALIZER_UNLOCKED;
@@ -64,8 +35,9 @@ float smoothedDelta = 0.0;
 int baseFreq = 0;
 bool baseFreqSet = false;
 float lastSmoothedFreq = 0.0;
+const int stableThreshold = 10;
 int stableCount = 0;
-bool alreadySetBase = false;                 // alreadySetBase保护机制
+bool autoSetBase = true; // 自动基准设定
 
 // ======= LED点阵图案 =======
 byte eyeopen[8] = {
@@ -209,84 +181,51 @@ void loop() {
 
     // ===== 自适应频率滤波 =====
     float freqDiff = fabs(currentFreq - smoothedFreq);
-    float alphaFreq = constrain(minAlphaFreq + (freqDiff / freqDiffDivisor), minAlphaFreq, maxAlphaFreq);
+    float alphaFreq = constrain(0.15 + (freqDiff / 30.0), 0.15, 0.55);
     smoothedFreq = alphaFreq * currentFreq + (1 - alphaFreq) * smoothedFreq;
 
-    // ===== 稳定性判定 =====
-    // 含义：连续多次频率变化很小 → 认为手停住了
+// ===== 稳定性判定（最小简化版） =====
+// 含义：连续多次频率变化很小 → 认为手停住了
 
-    float freqChange = fabs(smoothedFreq - lastSmoothedFreq);
+float freqChange = fabs(smoothedFreq - lastSmoothedFreq);
 
-    // 使用"当前 raw Δf"作为动作判断依据（不用 smoothedDelta）
-    float rawDelta = smoothedBaseFreq - smoothedFreq;
-    if (rawDelta < 0) rawDelta = 0;
+if (freqChange < 3.0) {          // 3Hz 内认为稳定（2~4 可调）
+    stableCount++;
+} else {
+    stableCount = 0;
+}
 
-    // 添加锁定计数器：当频率稳定时逐步累积，防止临界点跳动
-    static int currentLockCount = 0;
-
-    // 频率变化太大 → 清零所有状态
-    if (freqChange >= freqChangeMax) {
-        stableCount = 0;
-        alreadySetBase = false;
-        currentLockCount = 0;
-    }
-    // 手明显靠近（Δf ≥ rawDeltaReset）→ 重置稳定
-    else if (rawDelta >= rawDeltaReset) {
-        stableCount = 0;
-        alreadySetBase = false;
-        currentLockCount = 0;
-    }
-    // 中等Δf（3Hz ≤ Δf < 7.5Hz）：使用锁定机制防止卡住
-    else if (rawDelta >= 3.0) {
-        // 如果已经有足够的锁定计数，允许累积
-        if (currentLockCount >= stableLockCount && !alreadySetBase) {
-            stableCount++;
-        } else {
-            // 频率稳定时累积锁定计数
-            currentLockCount++;
-        }
-    }
-    // Δf小（< 3Hz）：正常累积
-    else {
-        if (!alreadySetBase) {
-            stableCount++;
-            currentLockCount++;
-        }
-    }
-
-    bool isStable = (stableCount >= stableThreshold);
-    if (isStable) alreadySetBase = true;
-    lastSmoothedFreq = smoothedFreq;
+bool isStable = (stableCount >= stableThreshold);
+lastSmoothedFreq = smoothedFreq;
 
     // ===== 按钮设定基准频率 =====
-    if (buttonPressed) {
+    if(buttonPressed){
         baseFreq = smoothedFreq;
         smoothedBaseFreq = smoothedFreq;
         baseFreqSet = true;
-        buttonPressed = false;
-        stableCount = 0;
+        buttonPressed=false;
+        stableCount=0;
     }
 
     // ===== 自动基准设定 =====
-    if (isStable && autoSetBase) {
+    if(isStable && autoSetBase)
         smoothedBaseFreq = smoothedFreq;
-        alreadySetBase = true;
-    }
+
     // ===== Δf 自适应滤波 =====
     float delta = smoothedBaseFreq - smoothedFreq;
-    if (delta < 0) delta = 0;
+    if(delta<0) delta=0;
     float deltaDiff = fabs(delta - smoothedDelta);
-    float alphaDelta = constrain(minAlphaDelta + (deltaDiff / deltaDiffDivisor), minAlphaDelta, maxAlphaDelta);
+    float alphaDelta = constrain(0.25 + (deltaDiff/20.0), 0.25, 0.75);
     smoothedDelta = alphaDelta * delta + (1 - alphaDelta) * smoothedDelta;
 
     // ===== 映射PWM =====
-    int duty = map(smoothedDelta, DELTA_MIN, DELTA_MAX, 0, 255);
-    duty = constrain(duty, 0, 255);
-    ledcWrite(PWM_OUT_PIN, duty);
+    int duty = map(smoothedDelta,5,12,0,255);
+    duty = constrain(duty,0,255);
+    ledcWrite(PWM_OUT_PIN,duty);
 
     // ===== 映射眼睛状态 =====
-    looking = map(smoothedDelta, DELTA_MIN, DELTA_MAX, 0, 8);
-    looking = constrain(looking, 0, 8);
+    looking = map(smoothedDelta,5,12,0,8);
+    looking = constrain(looking,0,8);
 
     switch(looking){
         case 8: displayEyes(realleft, realleft); break;
@@ -303,19 +242,15 @@ void loop() {
     }
 
     // ===== ESP-NOW 广播 =====
-    if (enableESPNow) {
-        myData.a = looking;
-        myData.b = duty;
-        esp_now_send(broadcastAddress, (uint8_t*)&myData, sizeof(myData));
-    }
+    myData.a = looking;
+    myData.b = duty;
+    esp_now_send(broadcastAddress,(uint8_t*)&myData,sizeof(myData));
 
     // ===== 串口监视 =====
-    if (enableSerial) {
-        static unsigned long lastPrint = 0;
-        if (millis() - lastPrint > 100) {
-            Serial.printf("Freq: %.1f | Base: %.1f | Δf: %.1f | PWM: %d | StableCnt: %d | a:%d | b:%d\n",
-                          smoothedFreq, smoothedBaseFreq, smoothedDelta, duty, stableCount, myData.a, myData.b);
-            lastPrint = millis();
-        }
+    static unsigned long lastPrint=0;
+    if(millis()-lastPrint>100){
+        Serial.printf("Freq: %.1f | Base: %.1f | Δf: %.1f | PWM: %d | StableCnt: %d | a:%d | b:%d\n",
+                      smoothedFreq, smoothedBaseFreq, smoothedDelta, duty, stableCount, myData.a, myData.b);
+        lastPrint=millis();
     }
 }
