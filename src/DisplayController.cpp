@@ -63,6 +63,39 @@ void DisplayController::updateEyes(int looking) {
     // 眨眼动画进行中时不更新正常眼睛
     if (m_blinkState != BLINK_IDLE) return;
     
+    // 1. 脏标记处理：图案变化时才更新显示
+    if (looking != m_lastLooking) {
+        m_lastLooking = looking;
+        switch(looking) {
+            case 8: displayEyes(EYE_REAL_LEFT, EYE_REAL_LEFT); break;
+            case 7: displayEyes(EYE_LEFT, EYE_LEFT); break;
+            case 6: displayEyes(EYE_SLIGHT_LEFT, EYE_SLIGHT_LEFT); break;
+            case 5: displayEyes(EYE_OPEN, EYE_OPEN); break;
+            case 4: displayEyes(EYE_SLIGHT_RIGHT, EYE_SLIGHT_RIGHT); break;
+            case 3: displayEyes(EYE_RIGHT, EYE_RIGHT); break;
+            case 2: displayEyes(EYE_REAL_RIGHT, EYE_REAL_RIGHT); break;
+            case 1: displayEyes(EYE_PARTIAL_OPEN, EYE_PARTIAL_OPEN); break;
+            case 0:
+            default:
+                displayEyes(EYE_PARTIAL, EYE_PARTIAL);
+                break;
+        }
+    }
+
+    // 2. 随机眨眼逻辑：在空闲状态 (looking=0) 下持续检测
+    // 注意：即使 m_lastLooking 没变，这里也要跑，否则静止时不会触发眨眼
+    if (looking == 0) {
+        // 50Hz 采样率下，1/150 概率大约每 3 秒眨一次眼
+        if (random(1, 150) == 1) {
+            m_blinkState = BLINK_PARTIAL;
+            m_blinkStartTime = millis();
+            displayEyes(EYE_CLOSED, EYE_CLOSED);
+        }
+    }
+}
+    // 眨眼动画进行中时不更新正常眼睛
+    if (m_blinkState != BLINK_IDLE) return;
+    
     // 脏标记: 仅在looking变化时刷新LED
     if (looking == m_lastLooking) return;
     m_lastLooking = looking;
