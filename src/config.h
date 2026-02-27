@@ -73,7 +73,7 @@
 #define AUTO_SET_BASE       true
 #define DEBUG_MODE_PLOTTER  false   // 串口绘图器模式
 #define DEBUG_MODE_SIMPLE   false   // 简单调试模式
-#define DEBUG_MODE_ALPHA    false    // alpha系数调试模式
+#define DEBUG_MODE_ALPHA    true    // alpha系数调试模式
 
 // ========================================================
 // ======= 配置结构体 (Runtime Configuration) ============

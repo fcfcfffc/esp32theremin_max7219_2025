@@ -2,7 +2,7 @@
 
 ![Platform](https://img.shields.io/badge/platform-ESP32--S3-blue)
 ![Framework](https://img.shields.io/badge/framework-Arduino-00979D)
-![Version](https://img.shields.io/badge/version-v3.4-orange)
+![Version](https://img.shields.io/badge/version-v3.5-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 基于 ESP32-S3 的电容式频率检测系统，通过 8 个级联 MAX7219 LED 矩阵显示"表情眼睛"。采用三因子自适应基线算法，支持环境噪音自动识别和冻结基线防死锁机制。
@@ -11,7 +11,7 @@
 
 ## 版本信息
 
-**当前版本**: v3.4 (2026年2月)
+**当前版本**: v3.5 (2026年2月)
 **发布日期**: 2026年2月
 **推荐用途**: 实时手势控制、互动艺术装置
 
@@ -30,6 +30,11 @@
 - **输出平滑滤波**: EMA 平滑眼睛状态 (α=0.2)
 - **ESP-NOW 广播**: Core 1 独立任务发送频率数据 (已优化至1ms延迟)
 - **PWM 输出**: 1kHz 频率 8 位精度信号
+
+### v3.5 更新
+- ✅ 重构为模块化代码结构：ThereminEngine、DisplayController、config
+- ✅ 眨眼逻辑：500ms冷却 + 5%概率 + 1/3执行率
+- ✅ ESP-NOW：10ms节流，防止发送过快
 
 ### v3.4 更新
 - ✅ 修复 looking=0 时眨眼不工作的问题
@@ -190,6 +195,12 @@ dR:-0.72 es:0 sc:1 ba:0.057 ef:0.000 hf:0.003 a:0.0546
 ---
 
 ## 版本历史
+
+### v3.5 (2026年2月)
+- ✅ 重构为模块化架构：ThereminEngine / DisplayController / config
+- ✅ 眨眼逻辑优化：500ms冷却 + 5%概率 + 1/3执行率
+- ✅ ESP-NOW 10ms发送节流
+- ✅ 原始眨眼动画恢复
 
 ### v3.4 (2026年2月)
 - ✅ 修复 looking=0 时眨眼不工作的问题

@@ -5,38 +5,24 @@
 #include "LedControl.h"
 #include "config.h"
 
-// ========================================================
-// ======= DisplayController 类 ==========================
-// ========================================================
-
 class DisplayController {
 public:
     DisplayController();
     
-    // 初始化
     bool begin();
     
-    // 更新眼睛显示 (带脏标记，仅变化时刷新)
+    // 基本显示更新 (脏标记)
     void updateEyes(int looking);
     
-    // 非阻塞眨眼处理 (每次loop调用)
-    void processBlink();
+    // 强制刷新 (用于眨眼动画后恢复图案)
+    void forceRefresh();
+
+    // 直接操作 API (给外部动画使用)
+    void displayEyes(const byte eyeL[], const byte eyeR[]);
     
-    // 清理显示
     void clear();
-    
-private:
-    LedControl* m_lc = nullptr;
-    
-    // 脏标记 - 仅在looking变化时刷新LED
-    int m_lastLooking = -1;
-    
-    // 非阻塞眨眼状态机
-    enum BlinkState { BLINK_IDLE, BLINK_PARTIAL, BLINK_CLOSED, BLINK_REOPEN };
-    BlinkState m_blinkState = BLINK_IDLE;
-    unsigned long m_blinkStartTime = 0;
-    
-    // 眼睛图案 (const, 存储在flash)
+
+    // 图案定义
     static const byte EYE_OPEN[8];
     static const byte EYE_CLOSED[8];
     static const byte EYE_PARTIAL[8];
@@ -47,8 +33,10 @@ private:
     static const byte EYE_SLIGHT_RIGHT[8];
     static const byte EYE_RIGHT[8];
     static const byte EYE_REAL_RIGHT[8];
-    
-    void displayEyes(const byte eyeL[], const byte eyeR[]);
+
+private:
+    LedControl* m_lc = nullptr;
+    int m_lastLooking = -1;
 };
 
-#endif // DISPLAY_CONTROLLER_H
+#endif
