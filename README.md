@@ -1,223 +1,469 @@
-# ESP32 Theremin Eye Display
+<<<<<<< HEAD
+# ESP32-S3 Theremin - 稳定版
 
-![Platform](https://img.shields.io/badge/platform-ESP32--S3-blue)
-![Framework](https://img.shields.io/badge/framework-Arduino-00979D)
-![Version](https://img.shields.io/badge/version-v3.4-orange)
-![License](https://img.shields.io/badge/license-MIT-green)
-
-基于 ESP32-S3 的电容式频率检测系统，通过 8 个级联 MAX7219 LED 矩阵显示"表情眼睛"。采用三因子自适应基线算法，支持环境噪音自动识别和冻结基线防死锁机制。
-
----
-
-## 版本信息
-
-**当前版本**: v3.4 (2026年2月)
-**发布日期**: 2026年2月
-**推荐用途**: 实时手势控制、互动艺术装置
-
----
-
-## 功能特性
-
-### 核心功能
-- **高频采样**: 20ms 采样周期 (50Hz)
-- **三因子自适应基线**: baseAlpha + envFactor - handFactor 动态调整
-- **连续 handFactor**: 二次曲线控制，无硬阈值跳变，98% 抵消
-- **环境噪音检测**: deltaRate 符号变化频率区分环境抖动与手移动
-- **双基线系统**: smoothedBaseFreq (持续跟随) + frozenBaseFreq (条件更新 + 防死锁漂移)
-- **非阻塞眨眼**: 状态机驱动，不阻塞主循环
-- **脏标志渲染**: 仅在 looking 值变化时刷新 LED，减少 SPI 开销
-- **输出平滑滤波**: EMA 平滑眼睛状态 (α=0.2)
-- **ESP-NOW 广播**: Core 1 独立任务发送频率数据 (已优化至1ms延迟)
-- **PWM 输出**: 1kHz 频率 8 位精度信号
-
-### v3.4 更新
-- ✅ 修复 looking=0 时眨眼不工作的问题
-- ✅ 优化 ESP-NOW 发送速度：任务延迟从 10ms 降至 1ms
-- ✅ 移除 50ms 发送节流，数据变化立即发送
-- ✅ 移除 200ms 超时空发，仅变化时发送
-
----
+基于ESP32-S3的热敏眼（Theremin）项目，通过频率差检测实现眼睛跟踪。
 
 ## 硬件连接
 
-| 功能 | GPIO | 描述 |
+| 引脚 | 功能 | 连接 |
 |------|------|------|
-| 频率输入 | 18 | 外部差频信号 (PCNT 双边沿检测) |
-| PWM输出 | 2 | PWM 信号输出 (1kHz, 8-bit) |
-| 校准按钮 | 4 | 手动基线校准 (INPUT_PULLUP) |
-| LED矩阵-DIN | 17 | 数据输入 (MAX7219) |
-| LED矩阵-CLK | 15 | 时钟 (MAX7219) |
-| LED矩阵-CS | 16 | 片选 (MAX7219) |
+| GPIO18 | 差频输入 | PCNT频率信号 |
+| GPIO4  | 按钮输入 | 手动重置基准频率 |
+| GPIO2  | PWM输出 | 输出到接收设备 |
+| GPIO17 | MAX7219 DIN | LED数据线 |
+| GPIO15 | MAX7219 CLK | LED时钟线 |
+| GPIO16 | MAX7219 CS | LED片选线 |
 
-### 硬件清单
-
-| 组件 | 数量 | 说明 |
-|------|------|------|
-| ESP32-S3 开发板 | 1 | 主控制器 |
-| MAX7219 LED 点阵 | 8 | 8x8 点阵模块级联 |
-| 差频信号源 | 1 | 连接到 PCNT 输入 |
-| 按钮 | 1 | 手动校准按钮 |
-
----
-
-## 软件架构
+## 工作原理
 
 ```
-src/
-├── main.cpp              # 主入口、ESP-NOW任务(Core1)、主循环
-├── config.h              # 引引定义 + 算法参数 + ThereminConfig结构体
-├── ThereminEngine.h      # 5个状态结构体 + 引擎类声明
-├── ThereminEngine.cpp    # 核心算法：采样→滤波→基线→delta→映射
-├── DisplayController.h   # 显示类 + 眨眼状态机枚举
-└── DisplayController.cpp # 10种static const眼睛图案、脏标志渲染
+GPIO18 → PCNT计数器 → 原始频率 → 自适应滤波 → 平滑频率
+                                          ↓
+计算Δf = Base - Freq → 自适应Δf滤波 → PWM/LED控制
+                       ↑
+              稳定性判定 + 智能基准更新
 ```
-
-### 数据流
-
-```
-Timer ISR (20ms)
-  └─ PCNT读取脉冲计数
-      └─ process()
-          ├─ 频率EMA滤波 (自适应α)
-          ├─ 基线初始化 (开机自动)
-          ├─ deltaRaw = frozenBase - smoothedFreq
-          ├─ delta EMA滤波
-          ├─ PWM输出
-          ├─ 稳定性判断 (stableWindow)
-          ├─ 环境噪音检测 (deltaRate符号变化)
-          ├─ 静态基线调整
-          ├─ 三因子自适应基线更新
-          │   ├─ smoothedBaseFreq ← adaptiveAlpha × EMA
-          │   └─ frozenBaseFreq ← 条件快速更新 / 慢速防死锁漂移
-          └─ 眼睛映射 + 输出平滑
-              └─ DisplayController
-                  ├─ 脏标志检测 → SPI刷新8模块
-                  └─ 非阻塞眨眼状态机
-```
-
----
 
 ## 核心算法
 
-### 1. 三因子自适应基线
+### 1. 自适应频率滤波（适度加强版）
 
 ```cpp
-float baseAlpha = 0.05f + delta * 0.01f;           // 基础因子
-float envFactor = isEnvironmentalJitter ? 0.2 : 0;  // 环境因子
-
-// handFactor 连续控制（二次曲线，无硬阈值跳变）
-float handRatio = delta / handFactorThreshold;       // 归一化
-handRatio = handRatio * handRatio;                   // 二次曲线
-float handFactor = baseAlpha * 0.98 * min(handRatio, 1.0);  // 98%抵消
-
-float adaptiveAlpha = baseAlpha + envFactor - handFactor;
-adaptiveAlpha = clamp(0.002, 0.5);
+float freqDiff = fabs(currentFreq - smoothedFreq);
+float alphaFreq = constrain(0.10 + (freqDiff / 50.0), 0.10, 0.40);
+smoothedFreq = alphaFreq * currentFreq + (1 - alphaFreq) * smoothedFreq;
 ```
 
-### 2. 冻结基线防死锁
+- 频率稳定时：α小（0.10），强滤波（90%历史数据）
+- 频率突变时：α大（0.40），快速响应（60%历史数据）
+- 分界点：50Hz时达到最大alpha
+
+---
+
+### 2. 滤波强度调整指南
+
+如果需要调整滤波强度，修改以下参数：
 
 ```cpp
-// 稳定时快速更新
-if (delta <= 0.5 && stableCount >= 70% && 间隔 > 3s)
-    frozenBaseFreq = smoothedFreq;
+// 自适应频率滤波参数
+float alphaFreq = constrain(minAlpha + (freqDiff / divisor), minAlpha, maxAlpha);
+```
 
-// 不稳定时慢速漂移恢复（防死锁）
-else
-    driftAlpha = 0.002 / max(1.0, delta);  // delta越大漂移越慢
-    frozenBaseFreq = driftAlpha * smoothedBaseFreq + (1-driftAlpha) * frozenBaseFreq;
+| 模式 | minAlpha | maxAlpha | divisor | 适用场景 |
+|------|----------|----------|---------|----------|
+| 保守模式 | 0.05 | 0.25 | 75.0 | 环境噪声很大 |
+| 适度加强 | **0.10** | **0.40** | **50.0** | **默认配置** |
+| 标准模式 | 0.15 | 0.55 | 30.0 | 环境较稳定 |
+| 快速响应 | 0.20 | 0.70 | 20.0 | 需要最快响应 |
+
+---
+
+### 2. 稳定性判定（防止临界点卡住）
+
+```cpp
+float freqChange = fabs(smoothedFreq - lastSmoothedFreq);
+float rawDelta = smoothedBaseFreq - smoothedFreq;
+if (rawDelta < 0) rawDelta = 0;
+
+// 频率变化太大 → 清零
+if (freqChange >= 3.0) {
+    stableCount = 0;
+    alreadySetBase = false;
+}
+// 手明显靠近（≥7.5Hz）→ 重置
+else if (rawDelta >= 7.5) {
+    stableCount = 0;
+    alreadySetBase = false;
+}
+// 中等Δf（3-7.5Hz）→ 锁定机制
+else if (rawDelta >= 3.0) {
+    if (stableLockCount >= 5 && !alreadySetBase) {
+        stableCount++;
+    } else {
+        stableLockCount++;
+    }
+}
+// Δf小（<3Hz）→ 正常累积
+else {
+    if (!alreadySetBase) {
+        stableCount++;
+        stableLockCount++;
+    }
+}
+```
+
+**工作流程**：
+- `stableLockCount`累积到5后，允许`stableCount`累积
+- 避免Δf在6-7Hz临界点卡住
+- 频率变化≥3Hz或Δf≥7.5Hz时清零
+
+---
+
+### 3. 自动基准更新
+
+```cpp
+bool isStable = (stableCount >= stableThreshold);
+if (isStable && autoSetBase) {
+    smoothedBaseFreq = smoothedFreq;
+    alreadySetBase = true;
+}
+```
+
+- 满足3个条件：稳定计数≥10、启用自动设置、alreadySetBase=false
+- 直接赋值（不使用平滑系数），快速跟随
+
+---
+
+### 4. Δf自适应滤波
+
+```cpp
+float delta = smoothedBaseFreq - smoothedFreq;
+if (delta < 0) delta = 0;
+float deltaDiff = fabs(delta - smoothedDelta);
+float alphaDelta = constrain(0.25 + (deltaDiff / 20.0), 0.25, 0.75);
+smoothedDelta = alphaDelta * delta + (1 - alphaDelta) * smoothedDelta;
+```
+
+- 变化大时：α大（0.75），快速响应
+- 变化小时：α小（0.25），强平滑
+
+---
+
+### 5. PWM和LED映射
+
+```cpp
+int duty = map(smoothedDelta, DELTA_MIN, DELTA_MAX, 0, 255);
+int looking = map(smoothedDelta, DELTA_MIN, DELTA_MAX, 0, 8);
+```
+
+- Δf范围：1-8Hz（可配置）
+- PWM范围：0-255
+- LED状态：0-8（向左看...向右看）
+
+---
+
+## 参数配置
+
+### 📊 核心可调参数
+
+#### 1. 稳定性判定参数
+
+| 参数名 | 默认值 | 可调范围 | 说明 |
+|--------|--------|----------|------|
+| `stableThreshold` | 10 | 5-20 | 稳定计数阈值，达到此值后设置基准频率（10次×20ms=0.2秒）|
+| `freqChangeMax` | 4.5 | 3.0-8.0 | 频率变化的最大允许值，超过此值判定为不稳定并清零稳定计数 |
+| `stableLockCount` | 5 | 3-10 | 锁定计数阈值，用于防止Δf在临界点卡住 |
+
+**调整建议**：
+- 环境噪声大：提高`freqChangeMax`到5.0-6.0
+- 需要更快稳定：降低`stableThreshold`到5-8
+- 频繁卡住：提高`stableLockCount`到6-8
+
+---
+
+#### 2. 手靠近检测参数
+
+| 参数名 | 默认值 | 可调范围 | 说明 |
+|--------|--------|----------|------|
+| `rawDeltaReset` | 7.5 | 6.0-8.0 | Δf阈值，超过此值判定为手靠近并重置稳定状态 |
+
+**调整建议**：
+- 需要更灵敏：降低到6.0-6.5
+- 避免误判：提高到8.0
+
+---
+
+#### 3. 自适应频率滤波参数
+
+| 参数名 | 默认值 | 可调范围 | 说明 |
+|--------|--------|----------|------|
+| `minAlphaFreq` | 0.10 | 0.05-0.20 | 频率稳定时的滤波系数（越小越平滑，响应越慢）|
+| `maxAlphaFreq` | 0.40 | 0.30-0.55 | 频率突变时的滤波系数（越大响应越快，抖动越大）|
+| `freqDiffDivisor` | 50.0 | 30.0-75.0 | 频率差分界点，达到此值时alpha为最大值 |
+
+**调整建议**：
+- 环境噪声大：`0.05-0.30-75.0`（保守模式）
+- 标准模式：`0.15-0.55-30.0`（快速响应）
+- 平衡模式：`0.10-0.40-50.0`（默认，适度加强）
+
+---
+
+#### 4. Δf自适应滤波参数
+
+| 参数名 | 默认值 | 可调范围 | 说明 |
+|--------|--------|----------|------|
+| `minAlphaDelta` | 0.25 | 0.15-0.35 | Δf稳定时的滤波系数 |
+| `maxAlphaDelta` | 0.75 | 0.60-0.85 | Δf突变时的滤波系数 |
+| `deltaDiffDivisor` | 20.0 | 15.0-30.0 | Δf变化分界点 |
+
+**调整建议**：
+- PWM抖动大：降低`maxAlphaDelta`到0.60-0.70
+- 响应太慢：提高`maxAlphaDelta`到0.80-0.85
+
+---
+
+#### 5. 映射范围参数
+
+| 参数名 | 默认值 | 可调范围 | 说明 |
+|--------|--------|----------|------|
+| `DELTA_MIN` | 1.0 | 0.5-2.0 | Δf最小值（对应PWM=0, looking=0）|
+| `DELTA_MAX` | 8.0 | 6.0-10.0 | Δf最大值（对应PWM=255, looking=8）|
+
+**调整建议**：
+- 读取范围小：`0.5-6.0`
+- 读取范围大：`2.0-10.0`
+
+---
+
+#### 6. 功能开关
+
+| 参数名 | 默认值 | 说明 |
+|--------|--------|------|
+| `autoSetBase` | true | 自动基准更新开关（true=自动，false=手动）|
+| `enableESPNow` | true | ESP-NOW广播开关（true=开启，false=关闭）|
+| `enableSerial` | true | 串口监视开关（true=开启，false=关闭）|
+
+**功能开关使用**：
+
+```cpp
+// 关闭ESP-NOW广播（只运行本地PWM和LED）
+bool enableESPNow = false;
+
+// 关闭串口监视（提高性能）
+bool enableSerial = false;
+
+// 关闭自动基准更新（仅使用按钮手动设置）
+bool autoSetBase = false;
 ```
 
 ---
 
-## 编译与上传
+### 📈 Looking和Duty映射表
 
-```bash
-# 使用 PlatformIO
-pio run --target upload
+| Δf (Hz) | looking | 眼睛状态 | duty (PWM) | 说明 |
+|---------|---------|----------|------------|------|
+| < DELTA_MIN | 0 | 睁眼 | 0 | 手离开 |
+| DELTA_MIN | 1 | 半开 | ~32 | 极近 |
+| DELTA_MIN+1 | 2 | 完全向右 | ~64 | 很近 |
+| DELTA_MIN+2 | 3 | 向右 | ~96 | 近 |
+| DELTA_MIN+3 | 4 | 轻微向右 | ~128 | 较近 |
+| (DELTA_MIN+DELTA_MAX)/2 | 5 | 睁眼 | ~160 | 中间 |
+| DELTA_MAX-3 | 6 | 轻微向左 | ~192 | 较远 |
+| DELTA_MAX-2 | 7 | 向左 | ~224 | 远 |
+| DELTA_MAX-1 | 8 | 完全向左 | 255 | 最远 |
+| ≥ DELTA_MAX | 8 | 完全向左 | 255 | 最远 |
 
-# 或使用 Arduino IDE
-# 1. 安装 ESP32 板支持
-# 2. 安装 LedControl 库
-# 3. 编译并上传
+**说明**：
+- looking范围：0-8（整数）
+- duty范围：0-255
+- Δf范围：DELTA_MIN到DELTA_MAX平滑插值
+
+---
+
+### 🔧 快速调整指南
+
+#### 场景1：环境噪声大，频发误判
+```cpp
+const float freqChangeMax = 6.0;          // 从4.5提高到6.0
+const float minAlphaFreq = 0.05;          // 加强滤波
+const float maxAlphaFreq = 0.30;
+const float freqDiffDivisor = 75.0;
 ```
 
-### 串口监视器
+#### 场景2：响应太慢
+```cpp
+const int stableThreshold = 5;            // 从10降到5
+const float minAlphaFreq = 0.15;
+const float maxAlphaFreq = 0.55;
+const float freqDiffDivisor = 30.0;
+```
 
-```bash
-pio device monitor -b 115200
+#### 场景3：PWM抖动大
+```cpp
+const float minAlphaDelta = 0.35;         // 加强Δf滤波
+const float maxAlphaDelta = 0.60;
+```
+
+#### 场景4：Δf卡住不动
+```cpp
+const int stableLockCount = 8;            // 从5提高到8
+const float freqChangeMax = 5.0;          // 适当放宽
 ```
 
 ---
 
-## 眼睛表情映射
-
-| Δf 范围 (Hz) | looking 值 | 表情 |
-|--------------|------------|------|
-| 0-4 | 0-1 | 闭合/部分闭合 (含眨眼) |
-| 4-7 | 2-3 | 右看 |
-| 7-9 | 4-5 | 中间/右偏 |
-| 9-12 | 6-8 | 左看 |
-
----
-
-## 调试模式
-
-编辑 `config.h` 切换：
+### 📝 参数配置示例代码
 
 ```cpp
-#define DEBUG_MODE_ALPHA    true   // alpha 系数调试 (推荐)
-#define DEBUG_MODE_PLOTTER  false  // 串口绘图器模式
-#define DEBUG_MODE_SIMPLE   false  // 简单调试模式
+// ========== 稳定性判定 ==========
+const int stableThreshold = 10;           // 稳定计数阈值
+const float freqChangeMax = 4.5;          // 频率变化最大允许值
+const float rawDeltaReset = 7.5;          // 手靠近Δf阈值
+const int stableLockCount = 5;            // 锁定计数阈值
+
+// ========== 自适应频率滤波 ==========
+const float minAlphaFreq = 0.10;          // 最小alpha
+const float maxAlphaFreq = 0.40;          // 最大alpha
+const float freqDiffDivisor = 50.0;       // 频率差分界点
+
+// ========== Δf自适应滤波 ==========
+const float minAlphaDelta = 0.25;         // Δf最小alpha
+const float maxAlphaDelta = 0.75;         // Δf最大alpha
+const float deltaDiffDivisor = 20.0;      // Δf差分界点
+
+// ========== 映射范围 ==========
+const float DELTA_MIN = 1.0;              // Δf最小值
+const float DELTA_MAX = 8.0;              // Δf最大值
+
+// ========== 功能开关 ==========
+bool autoSetBase = true;                  // 自动基准更新
+bool enableESPNow = true;                 // ESP-NOW广播
+bool enableSerial = true;                 // 串口监视
 ```
 
-### Alpha 调试输出格式
+## 串口监视输出
 
 ```
-dR:-0.72 es:0 sc:1 ba:0.057 ef:0.000 hf:0.003 a:0.0546
+Freq: 27300.5 | Base: 27306.9 | Δf: 6.1 | PWM: 182 | StableCnt: 0 | a:5 | b:182
 ```
 
-| 字段 | 说明 |
+| 字段 | 含义 | 说明 |
+|------|------|------|
+| Freq | 平滑后频率 | Hz |
+| Base | 基准频率 | Hz |
+| Δf | 频率差 | Hz（1-8范围） |
+| PWM | PWM输出 | 0-255 |
+| StableCnt | 稳定计数 | 0-10+ |
+| a | 眼睛状态 | 0-8 |
+| b | PWM值 | 0-255 |
+
+## 使用流程
+
+1. 启动设备，等待2秒初始化
+2. 自动学习基准频率（启动10秒后）
+3. 观察Serial输出，确认Freq和Base接近
+4. 如需手动调整基准，按下按钮（GPIO4）
+5. 靠近/离开手，观察Δf和looking变化
+
+## 常见问题
+
+### ❌ Δf卡在6-7Hz不动
+
+**原因**：临界点状态冲突
+
+**解决方案**：使用`stableLockCount`锁定机制（已实现）
+
+---
+
+### ❌ Base跟随频率漂移
+
+**原因**：手靠近时基准仍在更新
+
+**解决方案**：Δf≥7.5Hz时清零稳定状态（已实现）
+
+---
+
+### ❌ 响应太慢
+
+**原因**：`stableThreshold`太大
+
+**解决方案**：
+```cpp
+const int stableThreshold = 5;  // 从10降到5
+```
+
+---
+
+### ❌ 抖动大
+
+**原因**：滤波太弱
+
+**解决方案**：
+```cpp
+// 降低最大alpha
+float alphaFreq = constrain(0.1 + (freqDiff / 50.0), 0.1, 0.4);
+```
+
+## 眼睛状态对应表
+
+| Δf (Hz) | looking | 眼睛状态 | PWM |
+|---------|---------|----------|-----|
+| 0-1 | 0 | 睁眼 | 0 |
+| 1-2 | 1 | 半开 | ~32 |
+| 2-3 | 2 | 完全向右 | ~64 |
+| 3-4 | 3 | 向右 | ~96 |
+| 4-5 | 4 | 轻微向右 | ~128 |
+| 5-6 | 5 | 睁眼 | ~160 |
+| 6-7 | 6 | 轻微向左 | ~192 |
+| 7-8 | 7 | 向左 | ~224 |
+| 8+ | 8 | 完全向左 | 255 |
+
+## 技术规格
+
+| 项目 | 参数 |
 |------|------|
-| dR | deltaRaw = frozenBaseFreq - smoothedFreq |
-| es | envStableCounter (环境噪音持续计数) |
-| sc | staticCount (静态基线调整计数) |
-| ba | baseAlpha (基础因子) |
-| ef | envFactor (环境因子，0 或 0.2) |
-| hf | handFactor (手因子，连续值) |
-| a | adaptiveAlpha (最终自适应系数) |
-
----
+| 平台 | ESP32-S3 DevKitM-1 |
+| 采样频率 | 5Hz（200ms周期） |
+| 读取范围 | Δf: 1-8Hz |
+| PWM频率 | 1000Hz |
+| PWM分辨率 | 8bit |
+| ESP-NOW | 广播模式 |
 
 ## 版本历史
 
-### v3.4 (2026年2月)
-- ✅ 修复 looking=0 时眨眼不工作的问题
-- ✅ 优化 ESP-NOW 发送速度：任务延迟 10ms → 1ms
-- ✅ 移除 50ms 发送节流限制
-- ✅ 移除 200ms 超时空发
+### v3.1 参数优化版
+- ✅ 适度加强滤波（alpha: 0.15→0.10, 0.55→0.40）
+- ✅ 提高频率变化阈值（3.0Hz→4.5Hz）
+- ✅ 添加完整可调参数文档
+- ✅ 添加功能开关（ESP-NOW、串口）
+- ✅ 优化参数配置指南
 
-### v3.3 (2026年2月)
-- ✅ handFactor 改为连续二次曲线控制，消除 3.0Hz 阈值跳变
-- ✅ frozenBaseFreq 防死锁漂移恢复 (driftAlpha = 0.002/delta)
-- ✅ handFactor 抵消比例 80% → 98%
-- ✅ 非阻塞眨眼状态机
-- ✅ 脏标志渲染
-
-### v3.2 (2025年2月)
-- ✅ 重构为模块化代码结构
-- ✅ 10ms 采样周期 (100Hz)
-- ✅ 三因子自适应基线算法
+### v3.0 稳定版
+- ✅ 添加stableLockCount锁定机制
+- ✅ 修复临界点卡住问题
+- ✅ 优化Δf阈值（1-8Hz范围）
+- ✅ 使用自适应滤波算法
 
 ---
 
-## 许可证
+**最后更新**: 2025-02-07
+**版本**: v3.0（稳定版）
+=======
+ESP32 Frequency-to-PWM with ESP-NOW Transmission
+This project implements a frequency detection and PWM generation system using an ESP32. It reads an input signal's frequency using the ESP32's Pulse Counter (PCNT) hardware, compares it with a base reference frequency, maps the frequency difference to a PWM duty cycle, and transmits the result wirelessly via ESP-NOW to a peer ESP32 device.
 
-MIT License - see [LICENSE](LICENSE) file for details.
+🧠 Key Features
+Frequency Measurement: Uses hardware PCNT on pin GPIO 1 to measure input frequency (e.g., from a beat signal or oscillator).
 
----
+PWM Output: Maps frequency difference to an 8-bit PWM signal on GPIO 2.
 
-## 致谢
+Wireless Communication: Transmits PWM values via ESP-NOW to another ESP32 (define peer MAC).
 
-- [LedControl](https://github.com/wayoda/LedControl) - MAX7219 驱动库
-- [ESP32 Arduino Core](https://github.com/espressif/arduino-esp32) - ESP32 支持
+Base Frequency Calibration:
+
+Manual: Press a button (GPIO 19) to set the base reference frequency.
+
+Auto: When the signal is stable, the base frequency updates automatically.
+
+Stability Detection: Uses smoothed frequency changes to determine signal stability.
+
+📦 Hardware Requirements
+ESP32 (e.g., ESP32-S3)
+
+Signal input (e.g., sensor output or waveform generator)
+
+Push button (connected to GPIO 19)
+
+PWM-controllable device (e.g., LED or servo)
+
+Another ESP32 as receiver (for ESP-NOW)
+
+📶 Pin Configuration
+Function	GPIO	Description
+Frequency Input	1	Input signal for PCNT
+Button Input	19	Manual base frequency set
+PWM Output	2	Outputs PWM (0–255)
+
+📋 License
+MIT License
+>>>>>>> c1f70764133a0778c4c36cfeb24ff696bc39affb
